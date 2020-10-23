@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Registeration
+        </title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+       
+
+      
+        <div  class="form_container">
+            <form  name="form">
+            <div class="card">
+             <div class="container">
+                <label for="name">Name <b>*</b></label>  
+                  <div class="inp">
+                    <input type="text"  placeholder="Your answer" name="name" class="inputs"  id="name" onkeydown="namefunction()">
+                  </div>
+                 <div class="errorbar" id="name_error"></div>
+             </div>
+            </div>
+            <div class="card">
+             <div class="container">
+                <label for="email"> Email <b>*</b></label>
+                <div class="inp">
+                    <input type="email" name="email" placeholder="abc@gmail.com" class="inputs" onkeydown="emailfunction()" >
+                </div>
+                <div class="errorbar" id="email_error"></div>
+            </div>
+            </div>
+            <div class="card">
+            <div class="container">
+                <label for="organisation"> Organisation <b>*</b></label>
+                <div class="inp">
+                    <input type="text" name="organisation" placeholder="Stanford University" class="inputs" onkeyup="organisationfunction()">
+                </div>
+                <div class="errorbar" id="organisation_error"></div>
+            </div>
+            </div>
+            <div class="card">
+            <div class="container">
+                <label for="number"> Number <b>*</b></label>
+                <div class="inp">
+                    <input type="text" name="number" placeholder="9878391234"class="inputs" onkeydown="numberfunction()">
+                </div>
+                <div class="errorbar" id="number_error"></div>
+            </div>
+            </div>
+            <div class="card">
+            <div class="container">
+                <label for="Days"> What Days willl you attend? <b>*</b></label>
+                <div class="inp1">
+                    <input type="checkbox" name="DAY1" class="day" onchange="valid_checkbox()"> Day 1<br>
+                </div>
+                <div class="inp2">
+                    <input type="checkbox" name="DAY2" class="day"> Day 2<br>
+                </div>
+                <div class="inp3">
+                    <input type="checkbox" name="DAY3" class="day"> Day 3<br>
+                </div>
+                <div class="errorbar" id="check_error"></div> 
+            </div>
+            </div>
+            <div class="card">
+            <div class="container">
+                <label for="Diets"> Diet Preference <b>*</b></label>
+                <div class="inp1">
+                    <input type="radio" name="Diet" class="diet" id="veg"> Veg <br>
+                </div>
+                <div class="inp2">
+                    <input type="radio" name="Diet" class="diet" id="nonveg"> Non Veg <br>
+                </div>
+                <div class="inp3">
+                    <input type="radio" name="Diet" class="diet" id="both"> Both<br>
+                </div>
+                <div class="errorbar" id="radio_error"></div>
+            </div>
+            </div>
+            <div class="card">
+            <div class="container">
+                <label for="Attend"> Are you Coming? <b>*</b></label>
+
+                <div class="inp">
+                    <select name="Attend" class="Attend" id="Attend">
+                        <option value="Choose" >Choose</option>
+                        <option value="Yes" >Yes</option>
+                        <option value="No" >No</option>
+                        <option value="May be" >May Be</option>
+                        <option value="Sure" >Sure</option>
+                    </select>
+                </div>
+                <div class="errorbar" id="option_error"></div>
+            </div>
+            </div>
+        </form>
+            <input type="submit" value="Submit" id="submit" onclick="onSubmit()">
+        </div>
+    
+        <script src="form.js" ></script>
+    </body>
+</html>
